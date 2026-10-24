@@ -1,0 +1,36 @@
+name: Publish Nexus downloads
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+concurrency:
+  group: public-downloads
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify payload
+        shell: bash
+        run: |
+          cd downloads
+          sha256sum --check SHA256SUMS.txt
+      - name: Publish binaries
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" downloads/* --verify-tag --prerelease --title "Nexus $GITHUB_REF_NAME — Windows preview" --notes-file RELEASE_NOTES.md
+      - name: Update public download feed
+        run: |
+          git config user.name "Nexus releases"
+          git config user.email "releases@nexus.invalid"
+          cp release-input.json /tmp/nexus-release.json
+          git checkout main
+          git pull --ff-only
+          cp /tmp/nexus-release.json release.json
+          git add release.json
+          git commit -m "Update download feed for $GITHUB_REF_NAME"
+          git push origin main
