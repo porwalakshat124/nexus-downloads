@@ -1,11 +1,11 @@
 {
-  "version": "0.8.0",
-  "tag": "v0.8.0",
+  "version": "0.8.1",
+  "tag": "v0.8.1",
   "channel": "preview",
-  "installer": "https://github.com/porwalakshat124/nexus-downloads/releases/download/v0.8.0/Nexus-Setup-0.8.0-x64.exe",
-  "portable": "https://github.com/porwalakshat124/nexus-downloads/releases/download/v0.8.0/Nexus-Portable-0.8.0-x64.zip",
-  "checksums": "https://github.com/porwalakshat124/nexus-downloads/releases/download/v0.8.0/SHA256SUMS.txt",
-  "releaseUrl": "https://github.com/porwalakshat124/nexus-downloads/releases/tag/v0.8.0",
-  "installerBytes": 62277510,
-  "portableBytes": 88281844
+  "installer": "https://github.com/porwalakshat124/nexus-downloads/releases/download/v0.8.1/Nexus-Setup-0.8.1-x64.exe",
+  "portable": "https://github.com/porwalakshat124/nexus-downloads/releases/download/v0.8.1/Nexus-Portable-0.8.1-x64.zip",
+  "checksums": "https://github.com/porwalakshat124/nexus-downloads/releases/download/v0.8.1/SHA256SUMS.txt",
+  "releaseUrl": "https://github.com/porwalakshat124/nexus-downloads/releases/tag/v0.8.1",
+  "installerBytes": 62285987,
+  "portableBytes": 88281852
 }
