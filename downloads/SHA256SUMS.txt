@@ -1,0 +1,2 @@
+c38e364ed9cb303d02bf6ceb0f26d7271c7b56f4ed071adc3c83e0262e0854c5  Nexus-Portable-0.8.0-x64.zip
+1659936059e74910518baecd5babbbfc78083d93d41ffac1c5ec7a1f4acd32c1  Nexus-Setup-0.8.0-x64.exe
